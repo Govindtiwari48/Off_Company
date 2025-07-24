@@ -74,12 +74,10 @@ function searchProperties() {
     }
 }
 
-// WhatsApp integration
+// WhatsApp integration (UI only - non-functional)
 function openWhatsApp() {
-    const phoneNumber = '919876543210'; // Replace with actual phone number
-    const message = 'Hi, I am interested in your properties. Can you please provide more information?';
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, '_blank');
+    // Show a message that this is a demo
+    alert('WhatsApp integration is for demonstration purposes only.\n\nIn a real application, this would open WhatsApp with a pre-filled message.');
 }
 
 // Contact form handling
@@ -91,12 +89,11 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const name = formData.get('name');
     const email = formData.get('email');
     const phone = formData.get('phone');
-    const propertyType = formData.get('propertyType');
     const message = formData.get('message');
     const terms = formData.get('terms');
 
     // Basic validation
-    if (!name || !email || !phone || !propertyType || !message || !terms) {
+    if (!name || !email || !phone || !message || !terms) {
         alert('Please fill in all required fields and accept the terms and conditions.');
         return;
     }
@@ -124,7 +121,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     // Simulate API call
     setTimeout(() => {
         // Success message
-        alert(`Thank you for your message, ${name}!\n\nWe have received your inquiry about ${propertyType} properties. Our team will contact you at ${email} or ${phone} within 24 hours.\n\nMessage: ${message}`);
+        alert(`Thank you for your message, ${name}!\n\nWe have received your inquiry. Our team will contact you at ${email} or ${phone} within 24 hours.\n\nMessage: ${message}`);
 
         // Reset form
         document.getElementById('contactForm').reset();
@@ -134,21 +131,20 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         submitBtn.disabled = false;
 
         // Send email notification (simulated)
-        sendEmailNotification(name, email, phone, propertyType, message);
+        sendEmailNotification(name, email, phone, message);
 
     }, 2000);
 });
 
 // Simulate email notification
-function sendEmailNotification(name, email, phone, propertyType, message) {
+function sendEmailNotification(name, email, phone, message) {
     console.log('Email notification sent to:', {
-        to: 'info@bnmrealestate.com',
+        to: 'info@elitepropertiesindia.com',
         subject: `New Property Inquiry from ${name}`,
         body: `
             Name: ${name}
             Email: ${email}
             Phone: ${phone}
-            Property Type: ${propertyType}
             Message: ${message}
             
             This is a simulated email notification. In a real application, this would be sent via a backend service.
@@ -253,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Form input validation
-document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(input => {
+document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
     input.addEventListener('blur', function () {
         validateField(this);
     });
@@ -312,7 +308,6 @@ function validateField(field) {
 const errorStyles = document.createElement('style');
 errorStyles.textContent = `
     .form-group input.error,
-    .form-group select.error,
     .form-group textarea.error {
         border-color: #e74c3c;
         box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
@@ -359,7 +354,7 @@ function enhancedSearchProperties() {
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('BNM Real Estate website loaded successfully!');
+    console.log('Elite Properties India website loaded successfully!');
 
     // Add loading animation to sections
     const sections = document.querySelectorAll('section');

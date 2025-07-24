@@ -1,4 +1,4 @@
-# BNM Real Estate Website
+# Elite Properties India - Real Estate Website
 
 A modern, professional single-page real estate website built with HTML, CSS, and JavaScript. This website showcases premium properties across India with a focus on authentic Indian real estate data and professional presentation.
 
@@ -7,7 +7,7 @@ A modern, professional single-page real estate website built with HTML, CSS, and
 ### 1. **Navigation Bar**
 - Fixed navigation with smooth scrolling
 - Responsive mobile menu with hamburger icon
-- Professional branding with BNM Real Estate logo
+- Professional branding with Elite Properties India logo
 
 ### 2. **Hero Section with Slideshow**
 - Animated image slideshow with 3 premium property images
@@ -43,7 +43,6 @@ A modern, professional single-page real estate website built with HTML, CSS, and
 ### 5. **Contact Us Section**
 - **Functional contact form** with validation:
   - Name, Email, Phone validation
-  - Property type selection
   - Message field
   - Terms and conditions checkbox
 - Contact information display:
@@ -154,10 +153,10 @@ BNM/
 
 ### Changing Contact Information
 Edit the contact details in `index.html`:
-- Phone numbers
-- Email addresses
-- Office address
-- Working hours
+- Phone numbers: +91 98765 43210, +91 98765 43211
+- Email addresses: info@elitepropertiesindia.com, sales@elitepropertiesindia.com
+- Office address: DLF Cyber City, Phase 2, Gurgaon, Haryana 122002
+- Working hours: Monday - Saturday: 9:00 AM - 7:00 PM, Sunday: 10:00 AM - 5:00 PM
 
 ### Updating Property Data
 Modify the property information in the HTML:
@@ -226,6 +225,18 @@ Potential additions for a production website:
 - Virtual tour integration
 - Payment gateway integration
 - Admin panel for property management
+
+## 🏢 Company Information
+
+**Elite Properties India** is a fictional real estate company created for demonstration purposes. All contact information, property listings, and company details are fictional and should not be used for actual business purposes.
+
+### Contact Details:
+- **Company**: Elite Properties India
+- **Address**: DLF Cyber City, Phase 2, Gurgaon, Haryana 122002
+- **Phone**: +91 98765 43210, +91 98765 43211
+- **Email**: info@elitepropertiesindia.com, sales@elitepropertiesindia.com
+- **Website**: www.elitepropertiesindia.com (fictional)
+- **Year**: 2025
 
 ---
 
