@@ -80,6 +80,9 @@ function openWhatsApp() {
     alert('WhatsApp integration is for demonstration purposes only.\n\nIn a real application, this would open WhatsApp with a pre-filled message.');
 }
 
+// Google Sheets Integration
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbysQ0Md-cEFLNK30S15H_O6Ebr40H4ajQLSrk3HROXAXDSIxdOHnbZ_kkUk2A_OW32b/exec'; // Replace with your actual Google Apps Script URL
+
 // Contact form handling
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -90,11 +93,12 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const email = formData.get('email');
     const phone = formData.get('phone');
     const message = formData.get('message');
+    const consent = formData.get('consent');
     const terms = formData.get('terms');
 
     // Basic validation
-    if (!name || !email || !phone || !message || !terms) {
-        alert('Please fill in all required fields and accept the terms and conditions.');
+    if (!name || !email || !phone || !message || !consent || !terms) {
+        alert('Please fill in all required fields and accept both consent and terms & conditions.');
         return;
     }
 
@@ -118,10 +122,38 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
+    // Prepare data for Google Sheets
+    const formDataForSheets = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+        consent: consent ? true : false,
+        terms: terms ? true : false
+    };
+
+    // Send to Google Sheets (if URL is configured)
+    if (GOOGLE_SHEETS_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+        fetch(GOOGLE_SHEETS_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formDataForSheets)
+        })
+            .then(response => {
+                console.log('Data sent to Google Sheets successfully');
+            })
+            .catch(error => {
+                console.error('Error sending to Google Sheets:', error);
+            });
+    }
+
     // Simulate API call
     setTimeout(() => {
         // Success message
-        alert(`Thank you for your message, ${name}!\n\nWe have received your inquiry. Our team will contact you at ${email} or ${phone} within 24 hours.\n\nMessage: ${message}`);
+        alert(`Thank you for your message, ${name}!\n\nWe have received your inquiry and your consent for communication via SMS, WhatsApp, RCS, email, and other channels. Our team will contact you at ${email} or ${phone} within 24 hours.\n\nMessage: ${message}`);
 
         // Reset form
         document.getElementById('contactForm').reset();
@@ -131,13 +163,13 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         submitBtn.disabled = false;
 
         // Send email notification (simulated)
-        sendEmailNotification(name, email, phone, message);
+        sendEmailNotification(name, email, phone, message, consent);
 
     }, 2000);
 });
 
 // Simulate email notification
-function sendEmailNotification(name, email, phone, message) {
+function sendEmailNotification(name, email, phone, message, consent) {
     console.log('Email notification sent to:', {
         to: 'info@elitepropertiesindia.com',
         subject: `New Property Inquiry from ${name}`,
@@ -146,6 +178,7 @@ function sendEmailNotification(name, email, phone, message) {
             Email: ${email}
             Phone: ${phone}
             Message: ${message}
+            Consent Given: ${consent ? 'Yes' : 'No'}
             
             This is a simulated email notification. In a real application, this would be sent via a backend service.
         `
@@ -261,6 +294,13 @@ document.querySelectorAll('.form-group input, .form-group textarea').forEach(inp
     });
 });
 
+// Add validation for checkboxes
+document.querySelectorAll('.checkbox-group input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+        validateCheckbox(this);
+    });
+});
+
 function validateField(field) {
     const value = field.value.trim();
     let isValid = true;
@@ -304,6 +344,24 @@ function validateField(field) {
     }
 }
 
+function validateCheckbox(checkbox) {
+    const label = checkbox.parentNode.querySelector('label');
+
+    // Remove existing error styling
+    checkbox.classList.remove('error');
+    if (label) {
+        label.classList.remove('error');
+    }
+
+    // Add error styling if unchecked and required
+    if (checkbox.hasAttribute('required') && !checkbox.checked) {
+        checkbox.classList.add('error');
+        if (label) {
+            label.classList.add('error');
+        }
+    }
+}
+
 // Add CSS for error styling
 const errorStyles = document.createElement('style');
 errorStyles.textContent = `
@@ -311,6 +369,15 @@ errorStyles.textContent = `
     .form-group textarea.error {
         border-color: #e74c3c;
         box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+    }
+    
+    .checkbox-group input.error {
+        border-color: #e74c3c;
+        box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+    }
+    
+    .checkbox-group label.error {
+        color: #e74c3c;
     }
 `;
 document.head.appendChild(errorStyles);
