@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Heights Raheja - Premium Properties Across India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h2>Royal Heights Raheja</h2>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Properties</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="hero">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="../Project Images/Raheja/Screenshot 2025-07-25 193854.jpg" alt="Raheja Premium">
+                <div class="slide-content">
+                    <h1>Discover Your Dream Home</h1>
+                    <p>Premium properties across India's most sought-after locations</p>
+                    <a href="#trending" class="cta-button">Explore Properties</a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="../Project Images/Raheja/Screenshot 2025-07-25 194012.jpg" alt="Raheja Luxury">
+                <div class="slide-content">
+                    <h1>Luxury Living Redefined</h1>
+                    <p>Experience the finest in residential and commercial properties</p>
+                    <a href="#trending" class="cta-button">View Collection</a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="../Project Images/Raheja/Screenshot 2025-07-25 194453.jpg" alt="Raheja Investment">
+                <div class="slide-content">
+                    <h1>Investment Opportunities</h1>
+                    <p>High-return investment properties in prime locations</p>
+                    <a href="#trending" class="cta-button">Invest Now</a>
+                </div>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Trending Properties Section -->
+    <section id="trending" class="trending">
+        <div class="container">
+            <h2>Trending Properties</h2>
+            <p class="section-subtitle">Discover the most sought-after properties in prime locations</p>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images/Raheja/Screenshot 2025-07-25 193923.jpg" alt="Luxury Villa">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images/Raheja/Screenshot 2025-07-25 194033.jpg" alt="Premium Apartment">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images/Raheja/Screenshot 2025-07-25 194118.jpg" alt="Penthouse">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images/Raheja/Screenshot 2025-07-25 194227.jpg" alt="Villa">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images/Raheja/Screenshot 2025-07-25 194341.jpg" alt="Apartment">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images/Raheja/Screenshot 2025-07-25 194540.jpg" alt="Property">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search by City Section -->
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>Search Properties by Location</h2>
+            <p class="section-subtitle">Find your perfect property in your preferred location</p>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <select id="citySelect" class="city-select">
+                        <option value="">Select a Location</option>
+                        <option value="premium">Premium Properties</option>
+                        <option value="luxury">Luxury Properties</option>
+                        <option value="modern">Modern Properties</option>
+                        <option value="heritage">Heritage Properties</option>
+                        <option value="commercial">Commercial Properties</option>
+                        <option value="residential">Residential Properties</option>
+                    </select>
+                    <button onclick="searchProperties()" class="search-btn">Search Properties</button>
+                </div>
+            </div>
+
+            <div class="cities-grid">
+                <div class="city-card" onclick="selectCity('gurgaon')">
+                    <img src="../Project Images/Raheja/Screenshot 2025-07-25 194207.jpg" alt="Premium Properties">
+                    <div class="city-content">
+                        <p>Premium Residential & Commercial Hub</p>
+                        <span class="property-count">1,250+ Properties Available</span>
+                        <span class="property-type">Luxury Villas • Premium Apartments • Office Spaces</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('mumbai')">
+                    <img src="../Project Images/Raheja/Screenshot 2025-07-25 194247.jpg" alt="Luxury Properties">
+                    <div class="city-content">
+                        <p>Financial Capital & Luxury Living Destination</p>
+                        <span class="property-count">2,100+ Properties Available</span>
+                        <span class="property-type">Sea View Apartments • Penthouses • Commercial Towers</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('bangalore')">
+                    <img src="../Project Images/Raheja/Screenshot 2025-07-25 194317.jpg" alt="Modern Properties">
+                    <div class="city-content">
+                        <p>Tech Hub & Modern Living Spaces</p>
+                        <span class="property-count">1,800+ Properties Available</span>
+                        <span class="property-type">Smart Homes • IT Parks • Gated Communities</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('delhi')">
+                    <img src="../Project Images/Raheja/Screenshot 2025-07-25 194620.jpg" alt="Heritage Properties">
+                    <div class="city-content">
+                        <p>Capital City & Heritage Living</p>
+                        <span class="property-count">1,950+ Properties Available</span>
+                        <span class="property-type">Heritage Homes • Modern Apartments • Business Centers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">Get in touch with our real estate experts</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>Royal Heights Raheja<br>
+                                Raheja Plaza, Connaught Place<br>
+                                New Delhi, Delhi 110001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+91 98765 43210<br>
+                                +91 98765 43211</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@royalheightsraheja.com<br>
+                                sales@royalheightsraheja.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                                Sunday: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">By submitting this form, you hereby grant us permission to contact you via
+                            SMS, WhatsApp, RCS, email, and any other channel for property-related
+                            communications.</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms and Conditions and Privacy Policy</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Royal Heights Raheja</h3>
+                    <p>Your trusted partner in real estate investments across India. We specialize in premium
+                        residential and commercial properties in prime locations.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#trending">Properties</a></li>
+                        <li><a href="#search">Search</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Commitment</h4>
+                    <ul>
+                        <li>Transparent Pricing</li>
+                        <li>Quality Assurance</li>
+                        <li>24/7 Support</li>
+                        <li>Legal Compliance</li>
+                        <li>Customer Satisfaction</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-map-marker-alt"></i> Raheja Plaza, Connaught Place, New Delhi, Delhi 110001
+                        </p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@royalheightsraheja.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Royal Heights Raheja. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a>
+                        <a href="#" onclick="showTermsConditions()">Terms & Conditions</a>
+                        <a href="#" onclick="showRCS()">RCS Acknowledgement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p>Royal Heights Raheja is committed to protecting your privacy. This Privacy Policy explains how we
+                collect, use, and safeguard your personal information when you visit our website or use our services.
+            </p>
+            <h3>Information We Collect</h3>
+            <p>We collect information you provide directly to us, such as when you fill out contact forms, subscribe to
+                our newsletter, or communicate with us.</p>
+            <h3>How We Use Your Information</h3>
+            <p>We use the information we collect to provide, maintain, and improve our services, communicate with you,
+                and comply with legal obligations.</p>
+            <h3>Data Security</h3>
+            <p>We implement appropriate security measures to protect your personal information against unauthorized
+                access, alteration, disclosure, or destruction.</p>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Terms & Conditions</h2>
+            <p>By accessing and using Royal Heights Raheja's website and services, you agree to be bound by these
+                Terms and Conditions.</p>
+            <h3>Use of Services</h3>
+            <p>Our services are provided for informational and transactional purposes. You agree to use them only for
+                lawful purposes and in accordance with these terms.</p>
+            <h3>Property Information</h3>
+            <p>While we strive to provide accurate property information, we do not guarantee the accuracy, completeness,
+                or reliability of any property details.</p>
+            <h3>Limitation of Liability</h3>
+            <p>Royal Heights Raheja shall not be liable for any indirect, incidental, special, consequential, or
+                punitive damages arising from your use of our services.</p>
+        </div>
+    </div>
+
+    <!-- RCS Modal -->
+    <div id="rcsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>RCS Acknowledgement</h2>
+            <p>Royal Heights Raheja acknowledges and complies with the Real Estate (Regulation and Development) Act,
+                2016 (RERA) and all applicable regulations.</p>
+            <h3>RERA Registration</h3>
+            <p>Our company is registered under RERA with registration number: DELHI/REP/12345/2025</p>
+            <h3>Compliance</h3>
+            <p>We ensure full compliance with all RERA provisions including transparency in property transactions, fair
+                practices, and consumer protection measures.</p>
+            <h3>Grievance Redressal</h3>
+            <p>For any grievances related to our services, please contact our designated grievance officer at
+                grievance@royalheightsraheja.com</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

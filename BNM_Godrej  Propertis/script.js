@@ -80,8 +80,15 @@ function openWhatsApp() {
     alert('WhatsApp integration is for demonstration purposes only.\n\nIn a real application, this would open WhatsApp with a pre-filled message.');
 }
 
+// Scroll to contact section
+function scrollToContact() {
+    document.getElementById('contact').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
 // Google Sheets Integration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbysQ0Md-cEFLNK30S15H_O6Ebr40H4ajQLSrk3HROXAXDSIxdOHnbZ_kkUk2A_OW32b/exec'; // Replace with your actual Google Apps Script URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'; // Replace with your actual Google Apps Script URL
 
 // Contact form handling
 document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -171,7 +178,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Simulate email notification
 function sendEmailNotification(name, email, phone, message, consent) {
     console.log('Email notification sent to:', {
-        to: 'info@elitepropertiesindia.com',
+        to: 'info@greenvalleygodrej.com',
         subject: `New Property Inquiry from ${name}`,
         body: `
             Name: ${name}
@@ -236,18 +243,6 @@ window.addEventListener('scroll', function () {
         navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         navbar.style.boxShadow = 'none';
     }
-});
-
-// Property card click handlers
-document.querySelectorAll('.property-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const propertyCard = this.closest('.property-card');
-        const propertyName = propertyCard.querySelector('h3').textContent;
-        const propertyPrice = propertyCard.querySelector('.price').textContent;
-        const propertyLocation = propertyCard.querySelector('.location').textContent;
-
-        alert(`Property Details:\n\n${propertyName}\n${propertyLocation}\nPrice: ${propertyPrice}\n\nThis would typically open a detailed property page or modal with full information.`);
-    });
 });
 
 // Loading animation
@@ -337,7 +332,7 @@ function validateField(field) {
         const errorElement = document.createElement('div');
         errorElement.className = 'error-message';
         errorElement.textContent = errorMessage;
-        errorElement.style.color = '#e74c3c';
+        errorElement.style.color = '#27ae60';
         errorElement.style.fontSize = '0.8rem';
         errorElement.style.marginTop = '0.25rem';
         field.parentNode.appendChild(errorElement);
@@ -367,17 +362,17 @@ const errorStyles = document.createElement('style');
 errorStyles.textContent = `
     .form-group input.error,
     .form-group textarea.error {
-        border-color: #e74c3c;
-        box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+        border-color: #27ae60;
+        box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
     }
     
     .checkbox-group input.error {
-        border-color: #e74c3c;
-        box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+        border-color: #27ae60;
+        box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
     }
     
     .checkbox-group label.error {
-        color: #e74c3c;
+        color: #27ae60;
     }
 `;
 document.head.appendChild(errorStyles);
@@ -421,7 +416,7 @@ function enhancedSearchProperties() {
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Elite Properties India website loaded successfully!');
+    console.log('Green Valley Godrej Properties website loaded successfully!');
 
     // Add loading animation to sections
     const sections = document.querySelectorAll('section');
