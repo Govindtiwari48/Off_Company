@@ -147,8 +147,9 @@ BNM_Godrej  Propertis/
 
 ### Changing Contact Information
 Edit the contact details in `index.html`:
-- Phone numbers: +91 98765 43210, +91 98765 43211
-- Email addresses: info@greenvalleygodrej.com, sales@greenvalleygodrej.com
+- Phone number: 07935460220
+- WhatsApp number: +91 86929 01132
+- Email address: greenvalleygodrejproperties@gmail.com
 - Office address: Godrej One, Pirojshanagar, Mumbai, Maharashtra 400079
 - Working hours: Monday - Saturday: 9:00 AM - 7:00 PM, Sunday: 10:00 AM - 5:00 PM
 
@@ -160,7 +161,7 @@ Modify the property information in the HTML:
 ### WhatsApp Integration
 Update the phone number in `script.js`:
 ```javascript
-const phoneNumber = '919876543210'; // Replace with actual number
+const phoneNumber = '918692901132'; // Replace with actual number
 ```
 
 ### Color Scheme
@@ -226,8 +227,9 @@ Potential additions for a production website:
 ### Contact Details:
 - **Company**: Green Valley Godrej Properties
 - **Address**: Godrej One, Pirojshanagar, Mumbai, Maharashtra 400079
-- **Phone**: +91 98765 43210, +91 98765 43211
-- **Email**: info@greenvalleygodrej.com, sales@greenvalleygodrej.com
+- **Phone**: 07935460220
+- **WhatsApp**: +91 86929 01132
+- **Email**: greenvalleygodrejproperties@gmail.com
 - **Website**: www.greenvalleygodrej.com (fictional)
 - **Year**: 2025
 

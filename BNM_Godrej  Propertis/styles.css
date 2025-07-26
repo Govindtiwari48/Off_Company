@@ -247,40 +247,50 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+    align-items: start;
 }
 
 .property-card {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    height: fit-content;
+    border: 1px solid rgba(39, 174, 96, 0.1);
 }
 
 .property-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(39, 174, 96, 0.15);
+    border: 1px solid rgba(39, 174, 96, 0.3);
 }
 
 .property-image {
     position: relative;
-    height: 500px;
+    height: 300px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f9fa;
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px solid #27ae60;
 }
 
 .property-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.4s ease;
+    border-radius: 12px 12px 0 0;
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .property-card:hover .property-image img {
-    transform: scale(1.1);
+    transform: scale(1.08);
+    filter: brightness(1.2) contrast(1.1);
 }
 
 .property-content {
@@ -366,6 +376,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    align-items: start;
 }
 
 .city-card {
@@ -375,18 +386,28 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: fit-content;
 }
 
 .city-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(39, 174, 96, 0.15);
+}
+
+.city-card:hover img {
+    filter: brightness(1.15) contrast(1.08);
+    transform: scale(1.05);
 }
 
 .city-card img {
     width: 100%;
-    height: 450px;
-    object-fit: contain;
-    background-color: #f8f9fa;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px 15px 0 0;
+    transition: all 0.4s ease;
+    filter: brightness(1.05) contrast(1.02);
 }
 
 .city-content {
@@ -749,7 +770,7 @@ body {
     }
 
     .property-image {
-        height: 350px;
+        height: 250px;
     }
 
     .city-card img {
@@ -788,11 +809,11 @@ body {
     }
 
     .property-image {
-        height: 450px;
+        height: 250px;
     }
 
     .city-card img {
-        height: 400px;
+        height: 300px;
     }
 
     .cities-grid {
@@ -828,7 +849,7 @@ body {
     }
 
     .property-image {
-        height: 400px;
+        height: 250px;
     }
 
     .property-content {
@@ -847,7 +868,7 @@ body {
     }
 
     .city-card img {
-        height: 350px;
+        height: 300px;
     }
 
     .city-content {
@@ -922,6 +943,34 @@ html {
         min-height: 44px;
         touch-action: manipulation;
     }
+
+    /* Improved mobile navigation */
+    .nav-menu.active {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 2rem 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active li {
+        margin: 1rem 0;
+    }
+
+    /* Better mobile form experience */
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
 }
 
 /* Loading Animation */
@@ -934,4 +983,40 @@ html {
 .loading.loaded {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+
+    /* Ensure proper image display on small screens */
+    .property-image img {
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(1.1) contrast(1.05);
+    }
+
+    .city-card img {
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(1.05) contrast(1.02);
+    }
+
+    /* Better spacing for mobile */
+    .property-card,
+    .city-card {
+        margin-bottom: 1rem;
+    }
+
+    /* Improved button sizing for touch */
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    /* Better modal display on mobile */
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
 }

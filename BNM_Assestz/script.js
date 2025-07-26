@@ -74,10 +74,12 @@ function searchProperties() {
     }
 }
 
-// WhatsApp integration (UI only - non-functional)
+// WhatsApp integration
 function openWhatsApp() {
-    // Show a message that this is a demo
-    alert('WhatsApp integration is for demonstration purposes only.\n\nIn a real application, this would open WhatsApp with a pre-filled message.');
+    const phoneNumber = '918692901132';
+    const message = 'Hello! I am interested in your properties. Please provide more information.';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
 }
 
 // Scroll to contact section
@@ -178,7 +180,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Simulate email notification
 function sendEmailNotification(name, email, phone, message, consent) {
     console.log('Email notification sent to:', {
-        to: 'info@elitepropertiesassetz.com',
+        to: 'elitepropertiesindia377@gmail.com',
         subject: `New Property Inquiry from ${name}`,
         body: `
             Name: ${name}
