@@ -253,34 +253,43 @@ body {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    height: fit-content;
+    border: 1px solid rgba(155, 89, 182, 0.1);
 }
 
 .property-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(155, 89, 182, 0.15);
+    border: 1px solid rgba(155, 89, 182, 0.3);
 }
 
 .property-image {
     position: relative;
-    height: 500px;
+    height: 300px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f9fa;
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px solid #9b59b6;
 }
 
 .property-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.4s ease;
+    border-radius: 12px 12px 0 0;
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .property-card:hover .property-image img {
-    transform: scale(1.1);
+    transform: scale(1.08);
+    filter: brightness(1.2) contrast(1.1);
 }
 
 .property-content {
@@ -378,15 +387,24 @@ body {
 }
 
 .city-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(155, 89, 182, 0.15);
+}
+
+.city-card:hover img {
+    filter: brightness(1.15) contrast(1.08);
+    transform: scale(1.05);
 }
 
 .city-card img {
     width: 100%;
-    height: 450px;
-    object-fit: contain;
-    background-color: #f8f9fa;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px 15px 0 0;
+    transition: all 0.4s ease;
+    filter: brightness(1.05) contrast(1.02);
 }
 
 .city-content {
@@ -749,11 +767,11 @@ body {
     }
 
     .property-image {
-        height: 350px;
+        height: 250px;
     }
 
     .city-card img {
-        height: 300px;
+        height: 250px;
     }
 
     .contact-container {
@@ -788,11 +806,11 @@ body {
     }
 
     .property-image {
-        height: 450px;
+        height: 300px;
     }
 
     .city-card img {
-        height: 400px;
+        height: 300px;
     }
 
     .cities-grid {
@@ -828,7 +846,7 @@ body {
     }
 
     .property-image {
-        height: 400px;
+        height: 300px;
     }
 
     .property-content {
@@ -847,7 +865,7 @@ body {
     }
 
     .city-card img {
-        height: 350px;
+        height: 300px;
     }
 
     .city-content {
