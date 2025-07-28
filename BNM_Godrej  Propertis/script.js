@@ -90,7 +90,7 @@ function scrollToContact() {
 }
 
 // Google Sheets Integration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbz-xGMm7AjWjUX72PUpQ9hETmdKZqya0Ss74FoOJ5SSRNZ1Q14xQxWDwE2QhkqBk0yr3g/exec'; // Replace with your actual Google Apps Script URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwGnJ0b7ueKIe9py6t9w0kf9bA5cwYkHZHgD3HWIHhZv-vHIBKad3AiHTcXEmljpYhPRg/exec'; // Replace with your actual Google Apps Script URL
 
 // Contact form handling
 document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -180,7 +180,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Simulate email notification
 function sendEmailNotification(name, email, phone, message, consent) {
     console.log('Email notification sent to:', {
-        to: 'greenvalleygodrejproperties@gmail.com',
+        to: 'atul@godrejplotsales.shop',
         subject: `New Property Inquiry from ${name}`,
         body: `
             Name: ${name}

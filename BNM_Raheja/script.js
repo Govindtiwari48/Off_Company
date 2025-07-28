@@ -90,7 +90,7 @@ function scrollToContact() {
 }
 
 // Google Sheets Integration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwbq4prqKDAlm9byjlGgvFmQnzdsJ_gbiqmH2suPG--MIAQhhS47iFlcNgjiKMo4w5t/exec'; // Replace with your actual Google Apps Script URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxK5rYhJeiXb4OgpZOp-FZGLx810EQsssqrDr8ruYIvOmjj0mFc66io3LrncGkg0MmK/exec'; // Replace with your actual Google Apps Script URL
 
 // Contact form handling
 document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -180,7 +180,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Simulate email notification
 function sendEmailNotification(name, email, phone, message, consent) {
     console.log('Email notification sent to:', {
-        to: 'royalheightsraheja@gmail.com',
+        to: 'pradeep@rahejasalesoffice.shop',
         subject: `New Property Inquiry from ${name}`,
         body: `
             Name: ${name}

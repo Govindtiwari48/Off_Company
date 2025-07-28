@@ -322,10 +322,65 @@ body {
     background: linear-gradient(135deg, #2ecc71, #27ae60);
 }
 
+/* Plotted Development Section */
+.plotted-development {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.plotted-development h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.property-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(39, 174, 96, 0.9));
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.property-card:hover .property-overlay {
+    transform: translateY(0);
+}
+
+.property-overlay h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.property-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Residential Projects Section */
+.residential-projects {
+    padding: 80px 0;
+    background: white;
+}
+
+.residential-projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
 /* Search Section */
 .search-section {
     padding: 80px 0;
-    background: white;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .search-container {
