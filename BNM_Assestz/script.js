@@ -90,7 +90,7 @@ function scrollToContact() {
 }
 
 // Google Sheets Integration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbysQ0Md-cEFLNK30S15H_O6Ebr40H4ajQLSrk3HROXAXDSIxdOHnbZ_kkUk2A_OW32b/exec'; // Replace with your actual Google Apps Script URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwslSQG-0vVEodyzsV91N90W_kIk6sg_ZzOYv9WaaGMY93dqFN3XuBTBpDqZBFM0Xpr/exec'; // Replace with your actual Google Apps Script URL
 
 // Contact form handling
 document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -180,7 +180,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Simulate email notification
 function sendEmailNotification(name, email, phone, message, consent) {
     console.log('Email notification sent to:', {
-        to: 'elitepropertiesindia377@gmail.com',
+        to: 'ravinder@assetzsalesoffice.shop',
         subject: `New Property Inquiry from ${name}`,
         body: `
             Name: ${name}

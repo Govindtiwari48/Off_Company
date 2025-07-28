@@ -90,7 +90,7 @@ function scrollToContact() {
 }
 
 // Google Sheets Integration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzACE6eOpCiKJymPrUkXSR0B8LPSY6QHTDV9Zm4AEZUu01kKqd_4nP3pSuatLP_Z_OqUg/exec'; // Replace with your actual Google Apps Script URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxRzbhruzWt6obnKhnpumXfBKm1OWq3UpmM1pT60e2XFEGc-duJgz2L0NTlLUI7WMJ5/exec'; // Replace with your actual Google Apps Script URL
 
 // Contact form handling
 document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -180,7 +180,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Simulate email notification
 function sendEmailNotification(name, email, phone, message, consent) {
     console.log('Email notification sent to:', {
-        to: 'horizonrealtybrigade@gmail.com',
+        to: 'vikram@brigadesalesoffice.shop',
         subject: `New Property Inquiry from ${name}`,
         body: `
             Name: ${name}
