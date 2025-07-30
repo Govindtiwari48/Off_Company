@@ -194,32 +194,7 @@ function sendEmailNotification(name, email, phone, message, consent) {
     });
 }
 
-// Modal functionality
-function showPrivacyPolicy() {
-    document.getElementById('privacyModal').style.display = 'block';
-}
 
-function showTermsConditions() {
-    document.getElementById('termsModal').style.display = 'block';
-}
-
-function showRCS() {
-    document.getElementById('rcsModal').style.display = 'block';
-}
-
-// Close modals
-document.querySelectorAll('.close').forEach(closeBtn => {
-    closeBtn.addEventListener('click', function () {
-        this.closest('.modal').style.display = 'none';
-    });
-});
-
-// Close modal when clicking outside
-window.addEventListener('click', function (event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
