@@ -101,6 +101,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const name = formData.get('name');
     const email = formData.get('email');
     const phone = formData.get('phone');
+    const inquiry = formData.get('inquiry') || 'General Inquiry'; // Handle inquiry field
     const message = formData.get('message');
     const consent = formData.get('consent');
     const terms = formData.get('terms');
@@ -108,6 +109,12 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     // Basic validation
     if (!name || !email || !phone || !message || !consent || !terms) {
         alert('Please fill in all required fields and accept both consent and terms & conditions.');
+        return;
+    }
+
+    // Check if inquiry is selected (for contact.html page)
+    if (inquiry === '' && document.getElementById('inquiry')) {
+        alert('Please select an inquiry type.');
         return;
     }
 
@@ -136,6 +143,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         name: name,
         email: email,
         phone: phone,
+        inquiry: inquiry,
         message: message,
         consent: consent ? true : false,
         terms: terms ? true : false
@@ -162,7 +170,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     // Simulate API call
     setTimeout(() => {
         // Success message
-        alert(`Thank you for your message, ${name}!\n\nWe have received your inquiry and your consent for communication via SMS, WhatsApp, RCS, email, and other channels. Our team will contact you at ${email} or ${phone} within 24 hours.\n\nMessage: ${message}`);
+        alert(`Thank you for your message, ${name}!\n\nWe have received your ${inquiry} inquiry and your consent for communication via SMS, WhatsApp, RCS, email, and other channels. Our team will contact you at ${email} or ${phone} within 24 hours.\n\nMessage: ${message}`);
 
         // Reset form
         document.getElementById('contactForm').reset();
@@ -172,20 +180,21 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         submitBtn.disabled = false;
 
         // Send email notification (simulated)
-        sendEmailNotification(name, email, phone, message, consent);
+        sendEmailNotification(name, email, phone, inquiry, message, consent);
 
     }, 2000);
 });
 
 // Simulate email notification
-function sendEmailNotification(name, email, phone, message, consent) {
+function sendEmailNotification(name, email, phone, inquiry, message, consent) {
     console.log('Email notification sent to:', {
         to: 'ravinder@assetzsalesoffice.shop',
-        subject: `New Property Inquiry from ${name}`,
+        subject: `New ${inquiry} Inquiry from ${name}`,
         body: `
             Name: ${name}
             Email: ${email}
             Phone: ${phone}
+            Inquiry Type: ${inquiry}
             Message: ${message}
             Consent Given: ${consent ? 'Yes' : 'No'}
             
@@ -194,32 +203,7 @@ function sendEmailNotification(name, email, phone, message, consent) {
     });
 }
 
-// Modal functionality
-function showPrivacyPolicy() {
-    document.getElementById('privacyModal').style.display = 'block';
-}
 
-function showTermsConditions() {
-    document.getElementById('termsModal').style.display = 'block';
-}
-
-function showRCS() {
-    document.getElementById('rcsModal').style.display = 'block';
-}
-
-// Close modals
-document.querySelectorAll('.close').forEach(closeBtn => {
-    closeBtn.addEventListener('click', function () {
-        this.closest('.modal').style.display = 'none';
-    });
-});
-
-// Close modal when clicking outside
-window.addEventListener('click', function (event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
