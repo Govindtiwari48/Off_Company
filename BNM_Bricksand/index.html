@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricks and Milestones - Premium Properties & Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2>Milestone Realty Group</h2>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Properties</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="hero">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    alt="Modern Development">
+                <div class="slide-content">
+                    <h1>Achieve Your Milestones</h1>
+                    <p>Building your future with premium properties and milestones</p>
+                    <a href="#trending" class="cta-button">Start Journey</a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    alt="Commercial Complex">
+                <div class="slide-content">
+                    <h1>Excellence in Every Project</h1>
+                    <p>Experience excellence in real estate with every milestone</p>
+                    <a href="#trending" class="cta-button">View Projects</a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    alt="Business District">
+                <div class="slide-content">
+                    <h1>Smart Investments</h1>
+                    <p>Invest wisely with Milestone Realty Group for assured returns</p>
+                    <a href="#trending" class="cta-button">Invest Smart</a>
+                </div>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Trending Properties Section -->
+    <section id="trending" class="trending">
+        <div class="container">
+            <h2>Trending Properties</h2>
+            <p class="section-subtitle">Discover premium properties that mark significant milestones</p>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project_Images_2/Big Wow/BIG WOW.jpg" alt="Big Wow Project">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project_Images_2/Big Wow/BIG WOW-2.jpg" alt="Big Wow Development">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project_Images_2/Big Wow/BIG WOW-3.jpg" alt="Big Wow Luxury">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project_Images_2/Big Wow/BIG WOW-4.jpg" alt="Big Wow Premium">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project_Images_2/Big Wow/BIG WOW-5.jpg" alt="Big Wow Excellence">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project_Images_2/Big Wow/67aefd4ab785e034b2632e3a_lagos-1-p-1080.png"
+                            alt="Big Wow Lagos">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search by City Section -->
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>Search Properties by Location</h2>
+            <p class="section-subtitle">Find your perfect property in your preferred location</p>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <select id="citySelect" class="city-select">
+                        <option value="">Select a Location</option>
+                        <option value="premium">Premium Properties</option>
+                        <option value="luxury">Luxury Properties</option>
+                        <option value="modern">Modern Properties</option>
+                        <option value="heritage">Heritage Properties</option>
+                        <option value="commercial">Commercial Properties</option>
+                        <option value="residential">Residential Properties</option>
+                    </select>
+                    <button onclick="searchProperties()" class="search-btn">Search Properties</button>
+                </div>
+            </div>
+
+            <div class="cities-grid">
+                <div class="city-card" onclick="selectCity('gurgaon')">
+                    <img src="../Project_Images_2/Big Wow/67af051709df28dc2eea1e21_ww-2.png"
+                        alt="Big Wow Premium Properties">
+                    <div class="city-content">
+                        <p>Premium Residential & Commercial Hub</p>
+                        <span class="property-count">1,250+ Properties Available</span>
+                        <span class="property-type">Luxury Villas • Premium Apartments • Office Spaces</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('mumbai')">
+                    <img src="../Project_Images_2/Big Wow/67ca8b45422f6a0171ab7942_fore main image-p-1080.jpg"
+                        alt="Big Wow Luxury Properties">
+                    <div class="city-content">
+                        <p>Financial Capital & Luxury Living Destination</p>
+                        <span class="property-count">2,100+ Properties Available</span>
+                        <span class="property-type">Sea View Apartments • Penthouses • Commercial Towers</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('bangalore')">
+                    <img src="../Project_Images_2/Big Wow/BIG WOW.jpg" alt="Big Wow Modern Properties">
+                    <div class="city-content">
+                        <p>Tech Hub & Modern Living Spaces</p>
+                        <span class="property-count">1,800+ Properties Available</span>
+                        <span class="property-type">Smart Homes • IT Parks • Gated Communities</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('delhi')">
+                    <img src="../Project_Images_2/Big Wow/BIG WOW-2.jpg" alt="Big Wow Heritage Properties">
+                    <div class="city-content">
+                        <p>Capital City & Heritage Living</p>
+                        <span class="property-count">1,950+ Properties Available</span>
+                        <span class="property-type">Heritage Homes • Modern Apartments • Business Centers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">Get in touch with our real estate experts</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>Milestone Realty Group<br>
+                                Express Towers, Level 15<br>
+                                Delhi, New Delhi 110001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>7935460301</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>arpit@bricksandmilestones.shop</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                                Sunday: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">By submitting this form, you hereby grant us permission to contact you via
+                            SMS, WhatsApp, RCS, email, and any other channel for property-related
+                            communications.</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>
+                            and <a href="privacy.html" target="_blank">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Milestone Realty Group</h3>
+                    <p>Your trusted partner in achieving real estate milestones. We specialize in premium
+                        residential and commercial properties that mark significant achievements in your life.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#trending">Properties</a></li>
+                        <li><a href="#search">Search</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Commitment</h4>
+                    <ul>
+                        <li>Transparent Pricing</li>
+                        <li>Quality Assurance</li>
+                        <li>24/7 Support</li>
+                        <li>Legal Compliance</li>
+                        <li>Customer Satisfaction</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-map-marker-alt"></i> Express Towers, Level 15, Delhi, New Delhi 110001</p>
+                        <p><i class="fas fa-phone"></i> 7935460301</p>
+                        <p><i class="fas fa-envelope"></i> arpit@bricksandmilestones.shop</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Milestone Realty Group. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="privacy.html" target="_blank">Privacy Policy</a>
+                        <a href="terms.html" target="_blank">Terms & Conditions</a>
+                        <a href="rcs.html" target="_blank">RCS Acknowledgement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
