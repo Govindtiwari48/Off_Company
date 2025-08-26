@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodha Sales Office - Premium Lodha Properties & Developments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="8" fill="url(#gradient2)" />
+                            <path
+                                d="M20 8L24.5 16.5L32 17.5L26 24L27.5 31.5L20 27.5L12.5 31.5L14 24L8 17.5L15.5 16.5L20 8Z"
+                                fill="white" opacity="0.9" />
+                            <circle cx="20" cy="20" r="6" fill="url(#gradient2)" />
+                            <path
+                                d="M20 16C17.7909 16 16 17.7909 16 20C16 22.2091 17.7909 24 20 24C22.2091 24 24 22.2091 24 20C24 17.7909 22.2091 16 20 16Z"
+                                fill="white" />
+                            <defs>
+                                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#2980b9;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#1f4e79;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2>Lodha Sales Office</h2>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Properties</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="hero">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="../Project Images 3/Lodhaa/Lodha_World_Towers.jpg" alt="Lodha World Towers">
+                <div class="slide-content">
+                    <h1>Discover Lodha Living</h1>
+                    <p>Premium Lodha developments across Mumbai's most prestigious locations</p>
+                    <a href="#trending" class="cta-button">Explore Properties</a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="../Project Images 3/Lodhaa/JLL_Mumbai_Lodha20Infinia_7973_EXT_1.webp" alt="Lodha Infinia">
+                <div class="slide-content">
+                    <h1>Experience Lodha Excellence</h1>
+                    <p>World-class amenities and architectural brilliance in every development</p>
+                    <a href="#trending" class="cta-button">View Collection</a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="../Project Images 3/Lodhaa/USP1_Lodha-Vero_527X468.webp" alt="Lodha Vero">
+                <div class="slide-content">
+                    <h1>Invest in Lodha Legacy</h1>
+                    <p>Premium investment opportunities with guaranteed appreciation</p>
+                    <a href="#trending" class="cta-button">Invest Now</a>
+                </div>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Trending Properties Section -->
+    <section id="trending" class="trending">
+        <div class="container">
+            <h2>Trending Properties</h2>
+            <p class="section-subtitle">Discover Lodha's most prestigious residential and commercial developments</p>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images 3/Lodhaa/1.jpg" alt="Lodha Premium Development">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images 3/Lodhaa/2.jpg" alt="Lodha Luxury Project">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images 3/Lodhaa/3.jpg" alt="Lodha Infinia">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images 3/Lodhaa/4.jpg" alt="Lodha Development">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images 3/Lodhaa/5.jpg" alt="Lodha Project">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="../Project Images 3/Lodhaa/6.jpg" alt="Lodha Premium">
+                    </div>
+                    <div class="property-content">
+                        <button class="visit-btn" onclick="scrollToContact()">Visit Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search by City Section -->
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>Search Properties by Location</h2>
+            <p class="section-subtitle">Find your perfect property in your preferred location</p>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <select id="citySelect" class="city-select">
+                        <option value="">Select a Location</option>
+                        <option value="premium">Premium Properties</option>
+                        <option value="luxury">Luxury Properties</option>
+                        <option value="modern">Modern Properties</option>
+                        <option value="heritage">Heritage Properties</option>
+                        <option value="commercial">Commercial Properties</option>
+                        <option value="residential">Residential Properties</option>
+                    </select>
+                    <button onclick="searchProperties()" class="search-btn">Search Properties</button>
+                </div>
+            </div>
+
+            <div class="cities-grid">
+                <div class="city-card" onclick="selectCity('gurgaon')">
+                    <img src="../Project Images 3/Lodhaa/A.jpg" alt="Lodha Mumbai">
+                    <div class="city-content">
+                        <p>South Mumbai Premium Developments</p>
+                        <span class="property-count">12+ Lodha Projects Available</span>
+                        <span class="property-type">World Towers • Luxury Apartments • Commercial Spaces</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('mumbai')">
+                    <img src="../Project Images 3/Lodhaa/B.jpg" alt="Lodha Central Mumbai">
+                    <div class="city-content">
+                        <p>Central Mumbai Prime Locations</p>
+                        <span class="property-count">8+ Lodha Projects Available</span>
+                        <span class="property-type">Lodha Park • Premium Towers • Business Districts</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('bangalore')">
+                    <img src="../Project Images 3/Lodhaa/C.jpg" alt="Lodha Palava">
+                    <div class="city-content">
+                        <p>Palava Smart City Development</p>
+                        <span class="property-count">Lodha Palava Available</span>
+                        <span class="property-type">Smart City • Integrated Township • Modern Living</span>
+                    </div>
+                </div>
+
+                <div class="city-card" onclick="selectCity('delhi')">
+                    <img src="../Project Images 3/Lodhaa/D.jpg" alt="Lodha Premium">
+                    <div class="city-content">
+                        <p>Thane & Extended Mumbai</p>
+                        <span class="property-count">6+ Lodha Projects Available</span>
+                        <span class="property-type">Lodha Splendora • Premium Residences • Lifestyle Communities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">Get in touch with our real estate experts</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>Lodha Sales Office<br>
+                                Lodha Excelus, N.M. Joshi Marg<br>
+                                Lower Parel, Mumbai 400013</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>07935460471</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>himanshu@lodhasalesoffice.co.in</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                                Sunday: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp Support</h4>
+                            <p>+91 86929 01132<br>
+                                Available 24/7 for quick queries</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">By submitting this form, you hereby grant us permission to contact you via
+                            SMS, WhatsApp, RCS, email, and any other channel for property-related
+                            communications.</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>
+                            and <a href="privacy.html" target="_blank">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lodha Sales Office</h3>
+                    <p>Your trusted partner for Lodha developments across Mumbai. We specialize in premium
+                        Lodha residential and commercial properties with world-class amenities.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#trending">Properties</a></li>
+                        <li><a href="#search">Search</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our Commitment</h4>
+                    <ul>
+                        <li>Transparent Pricing</li>
+                        <li>Quality Assurance</li>
+                        <li>24/7 Support</li>
+                        <li>Legal Compliance</li>
+                        <li>Customer Satisfaction</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-map-marker-alt"></i> Lodha Excelus, N.M. Joshi Marg, Lower Parel, Mumbai
+                            400013</p>
+                        <p><i class="fas fa-phone"></i> 07935460471</p>
+                        <p><i class="fas fa-envelope"></i> himanshu@lodhasalesoffice.co.in</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Lodha Sales Office. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="privacy.html" target="_blank">Privacy Policy</a>
+                        <a href="terms.html" target="_blank">Terms & Conditions</a>
+                        <a href="rcs.html" target="_blank">RCS Acknowledgement</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
