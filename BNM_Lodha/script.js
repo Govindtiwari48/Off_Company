@@ -90,7 +90,7 @@ function scrollToContact() {
 }
 
 // Google Sheets Integration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwslSQG-0vVEodyzsV91N90W_kIk6sg_ZzOYv9WaaGMY93dqFN3XuBTBpDqZBFM0Xpr/exec'; // Replace with your actual Google Apps Script URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyU8s7O-Bqf2rRjNp1fiZ5Q_JuQQEDg98QSJ50wloCcTTyzVC5HSIybD5YHLOxMcqQt/exec'; // Replace with your actual Google Apps Script URL
 
 // Contact form handling
 document.getElementById('contactForm').addEventListener('submit', function (e) {
