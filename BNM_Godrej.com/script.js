@@ -76,7 +76,7 @@ function searchProperties() {
 
 // WhatsApp integration
 function openWhatsApp() {
-    const phoneNumber = '918692901132';
+    const phoneNumber = '919321923211';
     const message = 'Hello! I am interested in Godrej properties. Please provide more information about available plots and developments.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
